@@ -49,10 +49,12 @@ public class AES
 	public static void main(String[] args) throws Exception {
 		try
 		{						
-			String chave = "bolabolabolabola"; //tamanho: 16
-			String texto = "Alô porteiro, tô ligando pra te avisar!";			
-			byte[] textoCifrado = AES.cifra(texto, chave);
-			String textoDecifrado = AES.decifra(textoCifrado, chave);
+			//String k_bob = "bolabolabolabola"; //tamanho: 16
+			String k_alice = "bolobolobolobolo"; //tamanho: 16
+			
+			String texto = "teste, testando!";			
+			byte[] textoCifrado = AES.cifra(texto, k_alice);
+			String textoDecifrado = AES.decifra(textoCifrado, k_alice);
 			Imprimir(textoCifrado);
 			Imprimir(textoDecifrado);
 		}
